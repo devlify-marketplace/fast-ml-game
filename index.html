@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fast ML Game — MediaPipe Hands Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Fast ML Game — Catch with Your Hand</h1>
+      <p class="muted">Use your hand (webcam) or keyboard (← →) to move the catcher. Allow camera access when prompted.</p>
+    </header>
+
+    <section class="game-area">
+      <video id="video" autoplay playsinline style="display:none"></video>
+      <canvas id="game"></canvas>
+    </section>
+
+    <section class="controls">
+      <div class="stats">
+        <span>Score: <strong id="score">0</strong></span>
+        <span>Lives: <strong id="lives">3</strong></span>
+      </div>
+      <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" disabled>Stop</button>
+      </div>
+      <div class="notes">
+        <small>Built with MediaPipe Hands (client-side). No data is sent to a server.</small>
+      </div>
+    </section>
+
+    <footer>
+      <a href="https://github.com/devlify-marketplace/fast-ml-game">Repository</a>
+    </footer>
+  </main>
+
+  <!-- MediaPipe CDN scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
